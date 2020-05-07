@@ -53,6 +53,13 @@ else
 	echo "Selected map is: $map_to_launch"
 fi
 
+echo "Enter Server Name:"
+read server_displayname
+if [ -z "$map_to_launch" ]; then
+	echo "No server display name entered, which is required. Exiting script."
+	exit
+fi
+
 echo "Enter Remote Console connection password, or hit return for none:"
 read rcon_password
 
@@ -61,4 +68,4 @@ read server_password
 
 # Launch server now
 echo "Starting server now with map: $map_to_launch"
-docker run -it --rm --net=host lacledeslan/gamesvr-dods ./srcds_run -game dod +map $map_to_launch +sv_lan 0 +hostname EA_GAMERS +rcon_password $rcon_password +sv_password $server_password
+docker run -it --rm --net=host lacledeslan/gamesvr-dods ./srcds_run -game dod +map $map_to_launch +sv_lan 0 +hostname $server_displayname +rcon_password $rcon_password +sv_password $server_password
