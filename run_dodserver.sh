@@ -55,7 +55,7 @@ fi
 
 echo "Enter Server Name:"
 read server_displayname
-if [ -z "$map_to_launch" ]; then
+if [ -z "$server_displayname" ]; then
 	echo "No server display name entered, which is required. Exiting script."
 	exit
 fi
