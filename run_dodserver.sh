@@ -19,10 +19,8 @@ echo "Do you want to install or check for updates to the Day of Defeat docker co
 read refresh_docker
 
 if [ "$refresh_docker" == "Y" ]; then
-
 	# Install / Update container with:
 	docker pull lacledeslan/gamesvr-dods;
-
 fi
 
 # Choose Map from defaults installed with container.
