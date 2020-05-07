@@ -8,8 +8,10 @@
 
 # This script should be run on a machine that already has Docker (i.e. Linode Docker App Instance)
 
-# To Install / Run:
+# To install & run:
 # /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/johnclearyconsulting/docker_dod/master/run_dodserver.sh)"
+
+# To run again later:
 # chmod +x run_dodserver.sh
 # ./run_dodserver.sh
 
