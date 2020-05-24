@@ -67,4 +67,4 @@ read server_password
 
 # Launch server now
 echo "Starting server now with map: $map_to_launch"
-docker run -it --rm --net=host lacledeslan/gamesvr-dods ./srcds_run -game dod +map $map_to_launch +sv_lan 0 +hostname $server_displayname +rcon_password $rcon_password +sv_password $server_password
+docker run -it --rm --net=host lacledeslan/gamesvr-dods ./srcds_run -game dod +map $map_to_launch +sv_alltalk 1 +sv_lan 0 +hostname $server_displayname +rcon_password $rcon_password +sv_password $server_password
